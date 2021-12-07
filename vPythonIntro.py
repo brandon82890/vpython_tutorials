@@ -4,7 +4,7 @@ from time import *
 
 mRadius= .75
 wallThickness = .1
-roomWidth = 15
+roomWidth = 10
 roomDepth = 5
 roomHeight = 10
 
@@ -21,6 +21,10 @@ xPos = 0
 while True:
     rate(50)
     xPos= xPos + deltaX
-    if xPos > roomWidth/2 or xPos < -roomWidth/2:
+    mRight = xPos + mRadius
+    mLeft = xPos - mRadius
+    rightWallEdge = roomWidth/2 - wallThickness/2
+    leftWallEdge = -roomWidth/2 + wallThickness/2
+    if mRight >= rightWallEdge or mLeft <= leftWallEdge:
         deltaX = deltaX * (-1)
     marble.pos=vector(xPos, 0, 0)
