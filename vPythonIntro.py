@@ -2,11 +2,11 @@
 from vpython import *
 from time import *
 
-mRadius= .75
-wallThickness = .1
-roomWidth = 10
-roomDepth = 5
-roomHeight = 10
+mRadius= 2
+wallThickness = 1
+roomWidth = 15
+roomDepth = 12
+roomHeight = 8
 
 floor = box(pos = vector(0, -roomHeight/2, 0), size = vector(roomWidth, wallThickness, roomDepth), color = color.white)
 ceiling = box(pos = vector(0, roomHeight/2, 0), size = vector(roomWidth, wallThickness, roomDepth), color = color.white)
