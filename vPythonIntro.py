@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from vpython import *
 from time import *
 
